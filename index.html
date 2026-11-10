@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>SPP HQ Mockup</title>
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Mockup for Veronica Percia, built from the Nov 4 call. Sample data.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +12,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Archivo:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --ink:#09262d; --red:#e43c2f;
-  --mast:#09262d; --mast-fg:#ffffff; --mast-muted:#a9bcc0; --mast-line:#1d434c;
-  --bg:#f5f6f7; --paper:#ffffff; --fg:#0b1f25; --muted:#55666b; --line:#d9dedf;
-  --accent:#09262d; --accent-ink:#ffffff; --accent-soft:#e6ecee;
+  --red:#e43c2f; --red-deep:#c9301f; --red-soft:#fdece9;
+  --mast:#ffffff; --mast-fg:#111111; --mast-muted:#5c6166; --mast-line:#dcdcdc;
+  --bg:#f5f6f7; --paper:#ffffff; --fg:#111111; --muted:#5c6166; --line:#dcdddd;
+  --accent:#e43c2f; --accent-ink:#ffffff; --accent-soft:#fdece9;
   --good:#1f6a45; --warn:#85570b; --bad:#c22f24; --good-soft:#e1f0e7; --warn-soft:#f6ead3; --bad-soft:#fbe6e3;
   --mycase:#34508f; --mycase-soft:#e5e9f6;
   --zap:#8a3f12; --zap-soft:#fbe7da;
@@ -22,15 +23,6 @@
   --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
   color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root{
-  --mast:#0a2229; --mast-line:#1f4048;
-  --bg:#061a1f; --paper:#0c2930; --fg:#e9eeee; --muted:#9db0b4; --line:#1f4048;
-  --accent:#d3e2e5; --accent-ink:#09262d; --accent-soft:#143840;
-  --red:#f0655a;
-  --good:#74c796; --warn:#e6b25e; --bad:#ff8a80; --good-soft:#143326; --warn-soft:#3a2d14; --bad-soft:#3d1b18;
-  --mycase:#a5b6ee; --mycase-soft:#1c2a4a;
-  --zap:#f0a070; --zap-soft:#3a2418;
-  color-scheme:dark}}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
@@ -41,19 +33,19 @@ body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px
 .notice .in{padding-block:7px}
 .notice b{color:var(--bad)}
 .mast{background:var(--mast);color:var(--mast-fg);border-bottom:3px solid var(--red)}
-.mast .in{padding-top:20px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px 24px;flex-wrap:wrap}
-.mast h1{font-family:var(--display);font-weight:400;font-size:25px;line-height:1.15;margin:0;letter-spacing:.06em;text-transform:uppercase}
-.mast h1 .amp{color:var(--red)}
-.mast h1 .hq{display:inline-block;margin-left:12px;padding-left:12px;border-left:1px solid var(--mast-line);letter-spacing:.06em}
-.mast .sub2{font-size:13.5px;color:var(--mast-muted);margin:4px 0 0}
+.mast .in{padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap}
+.mast h1{margin:0;display:flex;align-items:center;gap:18px;font-weight:400}
+.mast h1 img{display:block;height:84px;width:auto}
+.mast h1 .hq{font-family:var(--display);font-size:44px;line-height:1;color:var(--red);padding-left:18px;border-left:1px solid var(--mast-line)}
+.mast .sub2{font-size:13.5px;color:var(--mast-muted);margin:0}
 .mast .who{font-size:13.5px;color:var(--mast-muted);text-align:right}
 .mast .who b{display:block;color:var(--mast-fg);font-family:var(--display);font-weight:400;font-size:18px}
 nav.rail{display:flex;gap:4px;margin-top:16px;overflow-x:auto;scrollbar-width:none}
 nav.rail::-webkit-scrollbar{display:none}
 nav.rail a{display:block;padding:10px 16px 11px;color:var(--mast-muted);text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap;border-radius:3px 3px 0 0}
-nav.rail a:hover{color:var(--mast-fg)}
-nav.rail a[aria-current="page"]{color:var(--ink);background:var(--bg);font-weight:600}
-@media (prefers-color-scheme: dark){nav.rail a[aria-current="page"]{color:var(--fg)}}
+nav.rail a:hover{color:var(--red-deep)}
+nav.rail a[aria-current="page"]:hover{color:#fff}
+nav.rail a[aria-current="page"]{color:#fff;background:var(--red);font-weight:600}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,th button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 main{padding-top:30px;padding-bottom:48px;min-width:0}
 h2{font-family:var(--display);font-weight:400;font-size:34px;line-height:1.15;margin:0 0 6px;text-wrap:balance}
@@ -74,7 +66,7 @@ ul.clean .t{flex:1 1 auto;min-width:0}
 .p-good{background:var(--good-soft);color:var(--good)}
 .p-warn{background:var(--warn-soft);color:var(--warn)}
 .p-bad{background:var(--bad-soft);color:var(--bad)}
-.p-acc{background:var(--accent-soft);color:var(--accent)}
+.p-acc{background:#ececec;color:var(--fg)}
 .p-mycase{background:var(--mycase-soft);color:var(--mycase)}
 .p-zap{background:var(--zap-soft);color:var(--zap)}
 .p-ask{background:transparent;color:var(--fg);border:1px dashed var(--muted);padding:1px 8px}
@@ -86,8 +78,7 @@ ul.clean .t{flex:1 1 auto;min-width:0}
 .tile .l{font-size:13.5px;color:var(--muted);margin-top:6px}
 .tile.hot .v{color:var(--bad)}
 .when{font-variant-numeric:tabular-nums;font-size:13.5px;font-weight:600;flex:none;width:44px}
-.banner{border:1px solid var(--line);border-left:3px solid var(--ink);background:var(--paper);border-radius:3px;padding:14px 18px;margin:0 0 18px;font-size:14.5px;max-width:none}
-@media (prefers-color-scheme: dark){.banner{border-left-color:var(--accent)}}
+.banner{border:1px solid var(--line);border-left:3px solid var(--red);background:var(--paper);border-radius:3px;padding:14px 18px;margin:0 0 18px;font-size:14.5px;max-width:none}
 .banner b{color:var(--fg)}
 .health{font-size:13px;color:var(--muted);display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:6px}
@@ -111,7 +102,7 @@ tbody tr:last-child td{border-bottom:0}
 td.r,th.r{text-align:right;padding-right:0}
 td.r+td,th.r+th{padding-left:24px}
 .own{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
-.ini{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:10.5px;font-weight:600;flex:none}
+.ini{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font-size:10.5px;font-weight:600;flex:none}
 .ini.pt{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px var(--muted)}
 .late{color:var(--bad);font-weight:600}
 /* invoicing steps */
@@ -120,7 +111,7 @@ td.r+td,th.r+th{padding-left:24px}
 .step.done{border-top-color:var(--good)}
 .step.prog{border-top-color:var(--red)}
 .step .n{font-family:var(--display);font-size:30px;color:var(--muted);line-height:1}
-.step.prog .n{color:var(--fg)}
+.step.prog .n{color:var(--red)}
 .step h4{margin:8px 0 4px;font-size:15px;line-height:1.3}
 .step .s{font-size:13.5px;margin:0 0 10px;color:var(--muted)}
 .step .s b{color:var(--fg)}
@@ -151,7 +142,8 @@ td.r+td,th.r+th{padding-left:24px}
 @media (max-width:980px){.steps{grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr))}}
 @media (max-width:760px){
   .pad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-  .mast h1{font-size:19px}
+  .mast h1 img{height:64px}
+  .mast h1 .hq{font-size:34px}
   .mast .who{text-align:left}
   h2{font-size:28px}
   .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -179,10 +171,9 @@ td.r+td,th.r+th{padding-left:24px}
 <header class="mast"><div class="pad wrap">
   <div class="in">
     <div>
-      <h1>Salvatore Prescott Porter <span class="amp">&amp;</span> Porter<span class="hq">HQ</span></h1>
-      <p class="sub2">DC office. Mockup for Veronica Percia, built from the Nov 4 call.</p>
+      <h1><img src="spp-logo.png" width="650" height="363" alt="Salvatore Prescott Porter &amp; Porter"><span class="hq">HQ</span></h1>
     </div>
-    <div class="who"><b>Thursday, November 5</b>Sample day</div>
+    <div class="who"><b>Thursday, November 5</b>DC office. Sample day, mockup for Veronica Percia.</div>
   </div>
   <nav class="rail" aria-label="Sections">
     <a href="#today" data-tab="today">Today</a>
@@ -472,7 +463,7 @@ td.r+td,th.r+th{padding-left:24px}
       var tr=el('tr');
       var name=el('b',null,c.client);cell(tr,'Client',name);
       cell(tr,'Matter',c.matter);
-      cell(tr,'Stage',pill(c.stage,STAGE_CLASS[c.stage]||'p-good'));
+      cell(tr,'Stage',pill(c.stage,STAGE_CLASS[c.stage]||'p-acc'));
       cell(tr,'Next action',c.next);
       cell(tr,'Owner',ownerBadge(c.owner));
       var t=cell(tr,'Last touch',touchLabel(c.touch),'r num');if(needsTouch(c))t.classList.add('late');
